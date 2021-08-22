@@ -14,7 +14,7 @@ global.username = ''
 const server = http.createServer(app)
 const io = require("socket.io")(server, {
     cors: {
-      origin: "*",
+      origin: "https://raven-chat.herokuapp.com/",
       methods: ["GET", "POST", "PUT", "DELETE"]
     }
   });
