@@ -48,8 +48,14 @@ io.on('connection', socket => {
 
 //Routes
 app.get('/', (req, res)=>{
-    res.send('welcome')
+    res.sendFile(__dirname + "/index.html");
 })
+
+app.get('/chat', (req, res)=>{
+    res.redirect('/')
+})
+
+
 app.post('/signup', (req, res)=>{
   User.findOne({username: req.body.username}, async (err, user)=>{
       if(err) throw err
