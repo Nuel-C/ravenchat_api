@@ -55,6 +55,10 @@ app.get('/chat', (req, res)=>{
     res.redirect('/')
 })
 
+app.get('/reports', (req, res)=>{
+    res.redirect('/')
+})
+
 
 app.post('/signup', (req, res)=>{
   User.findOne({username: req.body.username}, async (err, user)=>{
